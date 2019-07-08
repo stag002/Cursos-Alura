@@ -1,0 +1,17 @@
+SOLID é um acrônimo, um conjunto de 5 boas práticas em relação a Orientação a objetos em que cada letra representa uma prática em particular. O S nos remete ao SRP, o Single Responsibility Principle - em português: Princípio da Responsabilidade Única. E esse princípio está estritamente relacionado com a coesão.
+__
+
+Acoplamento aferente, ou seja, o acoplamento aferente mostra as classes que dependem dessa outra que possui uma propagação de mudança pequena.
+__
+
+Devemos acoplar classes, interfaces e módulos que sejam estáveis. Lembre-se: um módulo estável é aquele que tenta mudar pouco, ou seja, ele possui alguma coisa ao redor dele que o faz mudar muito pouco. E eu mostrei que, no caso da interface, o número de implementações embaixo, o número de pessoas usando aquela interface, são uma força contra mudança.
+__
+
+No mundo OO, existe a Lei de Demeter, e ela diz mais ou menos isso: "Olha, evite ao máximo fazer essas invocações em cadeia e invoque um método qualquer" - como é o exemplo desse código.
+__
+
+A sigla LSP significa Liskov Subtitutive Principle ou Princípio de Substituição de Liskov.
+
+E qual é a ideia?
+	Todo método tem as suas pré-condições e as suas pós-condições - Como ela vai receber os dados de entrada, quais são as constraints, as restrições dos dados de entrada e quais são as restrições do dado que ela gera como uma saída.
+	O Princípio de Liskov mostra que quando você tem uma classe filha, ela nunca pode apertar as pré-condições. Você nunca pode criar uma pré-condição que seja mais restrita do que da classe mãe. A classe filha só pode afrouxar a pré-condição.

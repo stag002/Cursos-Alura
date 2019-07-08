@@ -1,0 +1,2 @@
+C:\Users\stag002\source\repos\Solid\Solid\obj\Debug\Solid.csprojAssemblyReference.cache
+C:\Users\stag002\source\repos\Solid\Solid\obj\Debug\Solid.csproj.CoreCompileInputs.cache

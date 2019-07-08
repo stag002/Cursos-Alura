@@ -1,0 +1,4 @@
+C:\Users\stag002\source\repos\ByteBank\Aplicação de Console\obj\Debug\Aplicação de Console.csprojAssemblyReference.cache
+C:\Users\stag002\source\repos\ByteBank\Aplicação de Console\obj\Debug\Aplicação_de_Console.Properties.Resources.resources
+C:\Users\stag002\source\repos\ByteBank\Aplicação de Console\obj\Debug\Aplicação de Console.csproj.GenerateResource.cache
+C:\Users\stag002\source\repos\ByteBank\Aplicação de Console\obj\Debug\Aplicação de Console.csproj.CoreCompileInputs.cache

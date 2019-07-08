@@ -1,0 +1,36 @@
+body{
+    overflow: scroll;
+    background-color:floralwhite;
+}
+.campo-digitacao{
+    font-size: 20px;
+    height: 125px;
+    background-color: white;
+    border: 3px solid black;
+}
+.frase{
+    font-size: 20px;
+    color: currentColor;
+}
+.campo-disativado{
+    background-color: lightgray;
+}
+.icones{
+    vertical-align: middle;
+}
+.campo-correto{
+    border: 3px solid green;
+}
+.campo-errado{
+    border: 3px solid red;
+}
+.placar{
+    display: none;
+}
+#erro{
+    color:red;
+    display: none;
+}
+#spinner{
+    display: none;
+}

@@ -1,0 +1,36 @@
+Podemos definir facilmente a classe de qualquer caractere com o [A-Z].
+
+Conhecemos todos os quantifiers como ?, +, * e {n}.
+
+\s significa whitespace e é um atalho para [ \t\r\n\f].
+
+\w significa word char e é uma atalho para [A-Za-z0-9_].
+
+Existem âncoras predefinidas que selecionam uma posição dentro do alvo.
+
+\b é uma âncora que seleciona um word boundary, isso é o início ou fim da palavra.
+
+^ é uma âncora que seleciona o início da string alvo.
+
+$ é uma âncora que seleciona o fim do alvo.
+_____
+
+VERIFICAÇÃO DE EMAIL:
+^([\w-]\.?)+@([\w-]+\.)+([A-Za-z]{2,4})+$
+_____
+
+Nome era necessário capturar, então iremos criar um grupo ([\w\s]+)\|
+
+Data de nascimento não era necessário, por isso, deixaremos esse grupo como non-capturing group (?:\d\d\/\d\d\/\d\d\d\d)\|
+
+Rua Onde Mora é necessário capturar, e por isso, criamos um grupo normal: ([\w\s]+)\|
+
+Número é necessário capturar, portanto: (\d{1,4})\|
+
+CEP é necessário capturar, e podemos criar um grupo dessa maneira: (\d{5}-\d{3})\|
+
+Cidade é a nossa última análise, e não é necessária. Portanto, basta adicionarmos ?: para deixar o seu grupo não-capturável: (?:[\w\s]{10,})
+
+No fim, juntando tudo:
+
+([\w\s]+)\|(?:\d\d\/\d\d\/\d\d\d\d)\|([\w\s]+)\|(\d{1,4})\|(\d{5}-\d{3})\|(?:[\w\s]{10,})

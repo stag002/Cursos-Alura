@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v2.1": []
+  },
+  "packageFolders": {
+    "C:\\Users\\stag002\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\stag002\\GitLab\\cursoalura\\TDD\\Alura.LeilaoOnlineAula2\\Alura.LeilaoOnline.Core\\Alura.LeilaoOnline.Core.csproj",
+      "projectName": "Alura.LeilaoOnline.Core",
+      "projectPath": "C:\\Users\\stag002\\GitLab\\cursoalura\\TDD\\Alura.LeilaoOnlineAula2\\Alura.LeilaoOnline.Core\\Alura.LeilaoOnline.Core.csproj",
+      "packagesPath": "C:\\Users\\stag002\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\stag002\\GitLab\\cursoalura\\TDD\\Alura.LeilaoOnlineAula2\\Alura.LeilaoOnline.Core\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\stag002\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp2.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "netcoreapp2.1": {}
+    }
+  }
+}

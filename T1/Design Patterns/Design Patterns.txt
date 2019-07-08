@@ -1,0 +1,121 @@
+Os métodos do Builder agora guardam a informação, e retorna ele mesmo. Nosso builder tem agora uma interface fluente. A vantagem de usar method chaining, nome da técnica onde conseguimos invocar um método atrás do outro, é justamente a clareza do código e a eliminação do uso da variável criador (builder) repetidas vezes.
+
+Um dos problemas da utilização de construtores é que, em casos onde diversos atributos sejam opcionais, precisaríamos ter uma combinação gigante de construtores (uma para cada possível combinação de atributos obrigatórios e opcionais), tornando o código difícil de manter. Além disso, como construir esse objeto é complicado, colocar essa regra no construtor do objeto, só faz com que ele tenha agora mais uma responsabilidade.
+
+Em outros casos, poderiamos ter diversos ifs dentro do construtor, quanto mais complexo, pode ser mais prático e fácil de manter isolá-lo.
+
+O Builder possibilita a separação da complexidade da criação desse objeto em uma classe específica para isso, além de possibilitar a implementação de atributos opcionais mais facilmente.
+
+Podemos aliviar o problema dos diversos construtores utilizando argumentos opcionais. 
+Sempre que tivermos um objeto complexo de ser criado, que possui diversos atributos, ou que possui uma lógica de criação complicada, podemos esconder tudo isso em um Builder.
+
+Além de centralizar o código de criação e facilitar a manutenção, ainda facilitamos a vida das classes que precisam criar essa classe complexa, afinal a interface do Builder tende a ser mais clara e fácil de ser usada.
+_____________________________________________________________________
+
+Quando devemos aplicar o padrão Observer?
+
+Quando o acoplamento da nossa classe está crescendo, ou quando temos diversas ações diferentes a serem executadas após um determinado processo, podemos implementar o Observer.
+
+Ele permite que diversas ações sejam executadas de forma transparente à classe principal, reduzindo o acoplamento entre essas ações, facilitando a manutenção e evolução do código.
+____________________________________________________________________________________
+
+O Decorator se encaixaria bem nesse problema. Poderíamos fazer com que cada filtro seja um "Decorator", e vamos decorando a lista com todos os filtros existentes. Cada filtro teria sua própria classe, simples e fácil de ser compreendida e mantida.
+____________________________________________________________________________________
+
+O Template Method cairia como uma luva, já que ele possibilita que o desenvolvedor escreva a "estrutura" do algoritmo apenas uma vez, e a reutilize nas implementações específicas de cada um dos algoritmos.
+____________________________________________________________________________________
+
+O State facilitaria o trabalho do desenvolvedor, já que ele possibilitaria que as ações de cada estado fiquem centralizadas em classes específicas, evitando a possível bagunça de um código procedural cheio de ifs.
+____________________________________________________________________________________
+
+Padrões de projeto são alternativas para que o desenvolvedor consiga escrever código com responsabilidades mais bem definidas, com um baixo acoplamento, e que evolua de maneira natural. Características essas que não são encontrados em sistemas procedurais, que tipicamente apresentam código complexo, cheio de ifs, e que fazem muita coisa, tornando a manutenção custosa.
+
+Códigos que fazem bom uso de OO evoluem geralmente não pela adição de mais um if, mas sim pela criação de mais uma estratégia, mais um observador, mais um estado, e assim por diante.
+
+Padrões de projeto no fim apenas fazem bom uso da orientação a objetos, e seus conceitos e mecanismos, como encapsulamento, abstrações, interfaces, polimorfismo, e etc.
+____________________________________________________________________________________
+
+Sempre que temos uma quantidade grande de objetos similares a serem instanciados, uma boa solução é fazer cache dessas instâncias e reutilizá-la. Para isso, a implementação é geralmenta fazer uso de uma fábrica, que controla as instâncias. Esse padrão é conhecido por flyweight.
+____________________________________________________________________________________
+
+Agora temos uma maneira eficiente de salvar estados de um objeto, e restaurá-los caso necessário. Sempre que temos um problema como esse, fazemos uso do Memento. O Memento é um padrão de projeto que nos ajuda a salvar e restaurar estados de objetos.
+
+"PROBLEMA DO MEMENTO"
+Um possível problema é a quantidade de memória que ele pode ocupar, afinal estamos guardando muitas instâncias de objetos que podem ser pesados.
+
+Por isso, dependendo do tamanho dos seus objetos, a classe Estado pode passar a guardar não o objeto todo, mas sim somente as propriedades que mais fazem sentido.
+
+Nada impede você também de limitar a quantidade máxima de objetos no histórico que será armazenado.
+__________________________________________________________________________
+  //NotasMusicais notas = new NotasMusicais();
+            //IList<INota> musica = new List<INota>()
+            //{
+
+            //    notas.Pega("do"),
+            //    notas.Pega("re"),
+            //    notas.Pega("mi"),
+            //    notas.Pega("fa"),
+            //    notas.Pega("fa"),
+            //    notas.Pega("fa"),
+
+            //    notas.Pega("do"),
+            //    notas.Pega("re"),
+            //    notas.Pega("mi"),
+            //    notas.Pega("fa"),
+            //    notas.Pega("fa"),
+            //    notas.Pega("fa"),
+
+            //    notas.Pega("do"),
+            //    notas.Pega("re"),
+            //    notas.Pega("do"),
+            //    notas.Pega("re"),
+            //    notas.Pega("re"),
+            //    notas.Pega("re")
+            //};
+            //Piano piano = new Piano();
+            //piano.Toca(musica);
+
+            //Historico historico = new Historico();
+
+            //Contrato c = new Contrato(DateTime.Now, "Vinicius", TipoContrato.Novo);
+            //historico.Adiciona(c.SalvaEstado());
+
+            //c.Avanca();
+            //historico.Adiciona(c.SalvaEstado());
+
+            //c.Avanca();
+            //historico.Adiciona(c.SalvaEstado());
+
+            //Console.WriteLine(historico.Pega(0).Contrato.Tipo); ;
+            //Console.ReadKey();
+_____________________________________________________________________
+
+O padrão Interpreter é geralmente útil para interpretar DSLs. É comum que, ao ler a string (como por exemplo 2+3/4), o programa transforme-a em uma estrutura de dados melhor (como as nossas classes Expressao) e aí interprete essa árvore.
+______________________________________________________________________
+
+Quando temos uma árvore, e precisamos navegar nessa árvore de maneira organizada, podemos usar um Visitor.
+___________________________________________________________________________
+
+Nessa solução estamos ligando duas hierarquias que possuem responsabilidades distintas através de composição de classes. Essa composição funciona como uma ponte entre as duas hierarquias de classes e, por isso, esse padrão é conhecido como bridge.
+
+Quando temos uma hierarquia de classes que é responsável por diversas características do sistema (formatação e envio da mensagem, no exemplo), podemos utilizar o padrão bridge para separar as características em diversas hierarquias ligando-as através da composição de classes.
+
+Vimos que com o bridge conseguimos fazer com que o código da aplicação seja mais flexível e adaptável para os diversos problemas que são encontrados no dia-a-dia, mas quando estamos trabalhando com código legado ou desenvolvido por outras pessoas, nem sempre é possível mudar o design desse código para que ele se adapte à aplicação.
+__________________________________________________________________________
+
+Estratégia em C # Strategy é um padrão de design comportamental que transforma um conjunto de comportamentos em objetos e os torna intercambiáveis ??dentro do objeto de contexto original.  Para alterar a maneira como o contexto realiza seu trabalho, outros objetos podem substituir o objeto de estratégia vinculado atualmente por outro.
+_________________________________________________________________________
+
+O nome dessa padrão de projeto, que facilita a criação de comandos, chama-se Command. Usamos ele quando temos que separar os comandos que serão executados do objeto que ele pertence. Um bom exemplo disso é o uso de filas de trabalho.
+__________________________________________________________________________
+Adapter
+
+Utilizamos o adapter quando queremos adaptar o código de um sistema legado ou de uma biblioteca para que ele trabalhe corretamente com o sistema orientado a objetos que está sendo desenvolvido.
+Já no Adapter, nós temos uma biblioteca ou um sistema antigo cuja interface não se encaixa perfeitamente no sistema atual, nesse caso, podemos adaptar essa interface definida pela biblioteca ou sistema legado utilizando uma nova classe dentro de nosso sistema. Esse é um propósito bem diferente do que o dos outros padrões.
+_________________________________________________________________________
+A implementação acima é o que chamamos de Singleton. Ele faz com que só exista uma única instância da classe em todo o sistema!
+
+Mas, apesar dos dois padrões serem bastante populares, seu uso deve ser feito com cautela. O Singleton, por exemplo, quando mal utilizado, acaba por permitir ao usuário a utilização de variáveis globais (que é uma coisa que a programação procedural já mostrou que é problemático).
+
+Uma Facade tende a ser muito acoplada, e ter uma interface gorda. Facades menores podem até ser úteis, mas também devem ser usadas com parcimônia.
+
