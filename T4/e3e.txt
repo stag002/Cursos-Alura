@@ -1,0 +1,15 @@
+Aula 5:
+1- 	SELECT * FROM LIVROS FULL JOIN USUARIOS ON LIVROS.EMPRESTOU_ID = USUARIOS.ID (alternativa correta);
+
+2-	4;
+
+3-	4;
+
+4-	5;
+
+5-	É possível construir visões de relacionamento entre tabelas (JOINS). (alternativa correta);
+	Não armazenam dados. (alternativa correta);
+	São comandos SELECT pré-programados para ficarem disponíveis no banco de dados. 	(alternativa correta);
+
+Aula 6:
+
