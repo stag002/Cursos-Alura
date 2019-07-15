@@ -11,5 +11,14 @@ Aula 5:
 	Não armazenam dados. (alternativa correta);
 	São comandos SELECT pré-programados para ficarem disponíveis no banco de dados. 	(alternativa correta);
 
-Aula 6:
+Aula 9:
+1- 	É um recurso que permite executar códigos SQL a partir de determinadas situações ou eventos. (alternativa correta);
+	Um trigger pode executar um código SQL a partir de um registro que foi incluído em determinada tabela. (alternativa correta);
+
+2-	Facilita o compartilhamento de rotinas do banco de dados entre diferentes aplicações. (alternativa correta);
+
+	São blocos de código SQL armazenados no banco de dados. (alternativa correta);
+3-	BEFORE INSERT (alternativa correta);
+
+4-	AFTER UPDATE (alternativa correta);
 
