@@ -2,7 +2,7 @@ main{
     padding: 15px;
 }
 .menu{
-    background-color: darkred;
+    background: linear-gradient(to right, #610B0B, #8A0808, #B40404, #DF0101, #FF0000);
 }
 .textos{
     color: white;
@@ -15,8 +15,10 @@ main{
     object-position: 0 50%;
     height: 400px;
 }
-.cor-especial{
-    color: darkred;
+.frase{
+	background: linear-gradient(to right, darkred, red);
+	   -webkit-background-clip: text;
+	   -webkit-text-fill-color: transparent;
 }
 .botao-cor-especial{
     background-color: darkred;
