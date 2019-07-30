@@ -7,7 +7,7 @@ using Alura.Loja.Testes.ConsoleApp;
 
 namespace Alura.Loja.Testes.ConsoleApp.Migrations
 {
-    [DbContext(typeof(LojaContext))]
+    [DbContext(typeof(UsuarioContext))]
     [Migration("20170601184533_Promocao")]
     partial class Promocao
     {

@@ -15,7 +15,7 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         static void Main(string[] args)
         {
-            using (var contexto = new LojaContext())
+            using (var contexto = new UsuarioContext())
             {
                 var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
@@ -49,7 +49,7 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         private static void ExibeProdutosDaPromocao()
         {
-            using (var contexto2 = new LojaContext())
+            using (var contexto2 = new UsuarioContext())
             {
                 var serviceProvider = contexto2.GetInfrastructure<IServiceProvider>();
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
@@ -71,7 +71,7 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         private static void IncluirPromocao()
         {
-            using (var contexto = new LojaContext())
+            using (var contexto = new UsuarioContext())
             {
                 var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
@@ -114,7 +114,7 @@ namespace Alura.Loja.Testes.ConsoleApp
                 Cidade = "Cidade"
             };
 
-            using (var contexto = new LojaContext())
+            using (var contexto = new UsuarioContext())
             {
                 var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
@@ -141,7 +141,7 @@ namespace Alura.Loja.Testes.ConsoleApp
             promocaoDePascoa.IncluiProduto(p2);
             promocaoDePascoa.IncluiProduto(p3);
 
-            using (var contexto = new LojaContext())
+            using (var contexto = new UsuarioContext())
             {
                 var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();

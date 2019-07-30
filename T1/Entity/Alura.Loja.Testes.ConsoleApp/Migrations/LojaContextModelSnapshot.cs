@@ -7,7 +7,7 @@ using Alura.Loja.Testes.ConsoleApp;
 
 namespace Alura.Loja.Testes.ConsoleApp.Migrations
 {
-    [DbContext(typeof(LojaContext))]
+    [DbContext(typeof(UsuarioContext))]
     partial class LojaContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
