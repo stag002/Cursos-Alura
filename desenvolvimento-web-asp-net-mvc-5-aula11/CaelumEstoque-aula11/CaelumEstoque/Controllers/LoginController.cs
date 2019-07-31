@@ -21,12 +21,12 @@ namespace CaelumEstoque.Controllers
             if (usuario != null)
             {
                 Session["usuarioLogado"] = usuario;
-                return RedirectToAction("Index", "Produto");
+                return RedirectToAction("Index", "Usuario");
             }
             else
             {
                 return RedirectToAction("Index");
             }
         }
-	}
+    }
 }
