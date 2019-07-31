@@ -16,7 +16,6 @@ namespace CaelumEstoque.DAO
                 context.SaveChanges();
             }
         }
-
         public IList<Usuario> Lista()
         {
             using (var contexto = new EstoqueContext())
@@ -24,7 +23,6 @@ namespace CaelumEstoque.DAO
                 return contexto.Usuarios.ToList();
             }
         }
-
         public Usuario BuscaPorId(int id)
         {
             using (var contexto = new EstoqueContext())
@@ -32,7 +30,6 @@ namespace CaelumEstoque.DAO
                 return contexto.Usuarios.Find(id);
             }
         }
-
         public void Atualiza(Usuario usuario)
         {
             using (var contexto = new EstoqueContext())
@@ -41,7 +38,6 @@ namespace CaelumEstoque.DAO
                 contexto.SaveChanges();
             }
         }
-
         public Usuario Busca(string login, string senha)
         {
             using (var contexto = new EstoqueContext())
