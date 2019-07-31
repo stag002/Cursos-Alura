@@ -10,16 +10,14 @@ namespace CaelumEstoque.Controllers
 {
     public class LoginController : Controller
     {
-        //
-        // GET: /Login/
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Autentica(String login, String senha)
+        public ActionResult Autentica(String email, String senha)
         {
             UsuariosDAO dao = new UsuariosDAO();
-            Usuario usuario = dao.Busca(login, senha);
+            Usuario usuario = dao.Busca(email, senha);
             if (usuario != null)
             {
                 Session["usuarioLogado"] = usuario;

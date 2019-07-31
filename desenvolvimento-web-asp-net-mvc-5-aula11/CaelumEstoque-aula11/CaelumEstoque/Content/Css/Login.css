@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(../img/rio%20de%20janeiro%204k.jpg);
+    background-image: url('../img/rio de janeiro 4k.jpg');
     background-size: 100% 100%;
     display: flex;
     align-items: center;
