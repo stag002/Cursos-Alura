@@ -1,2 +1,0 @@
-C:\Users\stag002\Desktop\GitHub\Cursos-Alura\desenvolvimento-web-asp-net-mvc-5-aula11\CaelumEstoque-aula11\CaelumEstoque\obj\Debug\Projeto-Benner.csprojAssemblyReference.cache
-C:\Users\stag002\Desktop\GitHub\Cursos-Alura\desenvolvimento-web-asp-net-mvc-5-aula11\CaelumEstoque-aula11\CaelumEstoque\obj\Debug\Projeto-Benner.csproj.CoreCompileInputs.cache

@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Login.css" rel="stylesheet">
+    <title>Meu Roteiro / Login</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+</head>
+<body class="text-center">
+    <form class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Inscreva-se</h1>
+
+        <label for="inputNome" class="sr-only">Nome</label>
+        <input type="text" id="inputNome" class="form-control" placeholder="Nome" required>
+
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input name="inputpass" type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+
+        <div class="checkbox mb-3">
+            <label><input type="checkbox" value="remember-me">Lembrar senha</label>
+        </div>
+
+        @Html.ActionLink("Login", "Adiciona", "Login", new { email = "vini@gmail.com", senha = "123", nome = "vini" }, null)
+
+        @*<button class="btn btn-lg btn-block classe-botao" type="submit">Entrar</button>*@
+        @*    <input class="btn btn-lg btn-block classe-botao" type="submit" value="Entrar" name="botao1" id="botao1" />*@
+
+        <p class="mt-4 mb-3 text-muted">&copy; 2019</p>
+    </form>
+</body>
+</html>
